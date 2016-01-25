@@ -38,11 +38,11 @@ public class ImageAdapter extends BaseAdapter {
     //被调用多次
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        //取余方式制造循环
+        //取余方式制造循环.
         ImageView imageView = new ImageView(context);
 //        imageView.setBackgroundResource(resId[position]);
         imageView.setBackgroundResource(resId[position%resId.length]);
-        //缩略图宽高信息
+
         imageView.setLayoutParams(new Gallery.LayoutParams(400, 300));
         //缩放模式
         imageView.setScaleType(ImageView.ScaleType.FIT_XY);

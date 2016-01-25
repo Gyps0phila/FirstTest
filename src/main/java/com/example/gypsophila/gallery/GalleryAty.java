@@ -52,10 +52,9 @@ public class GalleryAty extends Activity implements AdapterView.OnItemSelectedLi
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-
     @Override
     public View makeView() {
-        //日志上看被调用了两次
+        //日志上看被调用了两次.
         Log.i("gallery", "makeview被调用");
         ImageView imageView = new ImageView(this);
         imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
