@@ -28,5 +28,12 @@
         android:id="@+id/btn_scrollView"
         android:text="scrollView"
         android:layout_below="@+id/fragment"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_gallery"
+        android:text="gallery"
+        android:layout_toRightOf="@+id/btn_scrollView"
+        android:layout_below="@+id/viewPager"/>
 
 </RelativeLayout>

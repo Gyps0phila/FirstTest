@@ -19,6 +19,7 @@
         <activity android:name="com.example.gypsophila.dailytest.ViewPagerAty"/>
         <activity android:name="com.example.gypsophila.viewflipper.ViewFlipperAty"/>
         <activity android:name="com.example.gypsophila.scrollview.ScrollViewAty"/>
+        <activity android:name="com.example.gypsophila.gallery.GalleryAty"/>
     </application>
 
 </manifest>

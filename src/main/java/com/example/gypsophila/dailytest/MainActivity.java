@@ -8,12 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.gypsophila.gallery.GalleryAty;
 import com.example.gypsophila.scrollview.ScrollViewAty;
 import com.example.gypsophila.viewflipper.ViewFlipperAty;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
-    private Button fragment,viewPager,btn_viewFlipper,btn_scrollView;
+    private Button fragment,viewPager,btn_viewFlipper,btn_scrollView,btn_gallery;
+    private int mark;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +25,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         viewPager = (Button) findViewById(R.id.viewPager);
         btn_viewFlipper = (Button) findViewById(R.id.btn_viewFlipper);
         btn_scrollView = (Button) findViewById(R.id.btn_scrollView);
+        btn_gallery = (Button) findViewById(R.id.btn_gallery);
         viewPager.setOnClickListener(this);
         btn_viewFlipper.setOnClickListener(this);
         btn_scrollView.setOnClickListener(this);
+        btn_gallery.setOnClickListener(this);
 
     }
 
@@ -69,10 +73,24 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_scrollView: {
                 Intent intent = new Intent(this, ScrollViewAty.class);
-                startActivity(intent);
+//                startActivity(intent);
+//                将上次记录浏览位置传值给ScrollViewAty
+                intent.putExtra("mark", mark);
+                startActivityForResult(intent, 1);
                 break;
             }
+            case R.id.btn_gallery: {
+                Intent intent = new Intent(this, GalleryAty.class);
+                startActivity(intent);
+            }
 
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1&&resultCode==2) {
+            mark = data.getIntExtra("mark", 0);
         }
     }
 }
