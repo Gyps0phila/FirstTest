@@ -20,6 +20,7 @@
         <activity android:name="com.example.gypsophila.viewflipper.ViewFlipperAty"/>
         <activity android:name="com.example.gypsophila.scrollview.ScrollViewAty"/>
         <activity android:name="com.example.gypsophila.gallery.GalleryAty"/>
+        <activity android:name="com.example.gypsophila.seekbar.SeekBarAty"/>
     </application>
 
 </manifest>

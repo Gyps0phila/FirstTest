@@ -10,11 +10,13 @@ import android.widget.Button;
 
 import com.example.gypsophila.gallery.GalleryAty;
 import com.example.gypsophila.scrollview.ScrollViewAty;
+import com.example.gypsophila.seekbar.SeekBarAty;
 import com.example.gypsophila.viewflipper.ViewFlipperAty;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     private Button fragment,viewPager,btn_viewFlipper,btn_scrollView,btn_gallery;
+    private Button btn_seekBar;
     private int mark;
 
     @Override
@@ -26,10 +28,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_viewFlipper = (Button) findViewById(R.id.btn_viewFlipper);
         btn_scrollView = (Button) findViewById(R.id.btn_scrollView);
         btn_gallery = (Button) findViewById(R.id.btn_gallery);
+        btn_seekBar = (Button) findViewById(R.id.btn_seekBar);
         viewPager.setOnClickListener(this);
         btn_viewFlipper.setOnClickListener(this);
         btn_scrollView.setOnClickListener(this);
         btn_gallery.setOnClickListener(this);
+        btn_seekBar.setOnClickListener(this);
 
     }
 
@@ -81,6 +85,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_gallery: {
                 Intent intent = new Intent(this, GalleryAty.class);
+                startActivity(intent);
+            }
+
+            case R.id.btn_seekBar: {
+                Intent intent = new Intent(this, SeekBarAty.class);
                 startActivity(intent);
             }
 
