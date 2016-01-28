@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.gypsophila.dailytest" >
 
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.vibrate" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +24,9 @@
         <activity android:name="com.example.gypsophila.scrollview.ScrollViewAty"/>
         <activity android:name="com.example.gypsophila.gallery.GalleryAty"/>
         <activity android:name="com.example.gypsophila.seekbar.SeekBarAty"/>
+        <activity android:name="com.example.gypsophila.toast.ToastAty"/>
+        <activity android:name="com.example.gypsophila.dialog.DialogAty"/>
+        <activity android:name="com.example.gypsophila.notification.NotificationAty"/>
     </application>
 
 </manifest>

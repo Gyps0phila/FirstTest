@@ -8,15 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.gypsophila.notification.NotificationAty;
+import com.example.gypsophila.dialog.DialogAty;
 import com.example.gypsophila.gallery.GalleryAty;
 import com.example.gypsophila.scrollview.ScrollViewAty;
 import com.example.gypsophila.seekbar.SeekBarAty;
+import com.example.gypsophila.toast.ToastAty;
 import com.example.gypsophila.viewflipper.ViewFlipperAty;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     private Button fragment,viewPager,btn_viewFlipper,btn_scrollView,btn_gallery;
-    private Button btn_seekBar;
+    private Button btn_seekBar,btn_toast,btn_dialog,btn_notification;
     private int mark;
 
     @Override
@@ -29,12 +32,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_scrollView = (Button) findViewById(R.id.btn_scrollView);
         btn_gallery = (Button) findViewById(R.id.btn_gallery);
         btn_seekBar = (Button) findViewById(R.id.btn_seekBar);
+        btn_toast = (Button) findViewById(R.id.btn_toast);
+        btn_dialog = (Button) findViewById(R.id.btn_dialog);
+        btn_notification = (Button) findViewById(R.id.btn_notification);
         viewPager.setOnClickListener(this);
         btn_viewFlipper.setOnClickListener(this);
         btn_scrollView.setOnClickListener(this);
         btn_gallery.setOnClickListener(this);
         btn_seekBar.setOnClickListener(this);
-
+        btn_toast.setOnClickListener(this);
+        btn_dialog.setOnClickListener(this);
+        btn_notification.setOnClickListener(this);
     }
 
     @Override
@@ -90,6 +98,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             case R.id.btn_seekBar: {
                 Intent intent = new Intent(this, SeekBarAty.class);
+                startActivity(intent);
+            }
+            case R.id.btn_toast: {
+                Intent intent = new Intent(this, ToastAty.class);
+                startActivity(intent);
+            }
+            case R.id.btn_dialog: {
+                Intent intent = new Intent(this, DialogAty.class);
+                startActivity(intent);
+            }
+            case R.id.btn_notification: {
+                Intent intent = new Intent(this, NotificationAty.class);
                 startActivity(intent);
             }
 

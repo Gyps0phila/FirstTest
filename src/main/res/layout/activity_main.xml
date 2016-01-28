@@ -42,5 +42,26 @@
         android:text="seekbar"
         android:layout_toRightOf="@+id/btn_gallery"
         android:layout_below="@+id/btn_viewFlipper"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_toast"
+        android:text="toast"
+        android:layout_below="@id/btn_scrollView"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_dialog"
+        android:text="dialog"
+        android:layout_below="@id/btn_scrollView"
+        android:layout_toRightOf="@+id/btn_toast"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_notification"
+        android:text="notification"
+        android:layout_toRightOf="@+id/btn_dialog"
+        android:layout_below="@+id/btn_scrollView"/>
+
 
 </RelativeLayout>
