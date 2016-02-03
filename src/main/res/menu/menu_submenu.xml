@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="文件">
+        <menu>
+            <item
+                android:title="新建"
+                android:id="@+id/submenu_item1"/>
+            <item
+                android:title="保存"
+                android:id="@+id/submenu_item2"/>
+            <item
+                android:title="打开"
+                android:id="@+id/submenu_item3"/>
+        </menu>
+
+    </item>
+    <item
+        android:title="编辑">
+        <menu>
+            <item
+                android:title="复制"
+                android:id="@+id/submenu_item4"/>
+            <item
+                android:title="粘贴"
+                android:id="@+id/submenu_item5"/>
+            <item
+                android:title="重命名"
+                android:id="@+id/submenu_item6"/>
+        </menu>
+
+    </item>
+
+</menu>

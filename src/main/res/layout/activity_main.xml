@@ -62,6 +62,19 @@
         android:text="notification"
         android:layout_toRightOf="@+id/btn_dialog"
         android:layout_below="@+id/btn_scrollView"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contextmenu"
+        android:id="@+id/btn_contextMenu"
+        android:layout_below="@+id/btn_toast"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sharedpreferences"
+        android:id="@+id/btn_sharedPreferences"
+        android:layout_toRightOf="@+id/btn_contextMenu"
+        android:layout_below="@+id/btn_toast"/>
 
 
 </RelativeLayout>
