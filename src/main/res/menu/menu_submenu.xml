@@ -11,7 +11,7 @@
                 android:title="sqlitedatabase"
                 android:id="@+id/submenu_item2"/>
             <item
-                android:title="打开"
+                android:title="contentresolver1"
                 android:id="@+id/submenu_item3"/>
         </menu>
 
@@ -20,7 +20,7 @@
         android:title="编辑">
         <menu>
             <item
-                android:title="复制"
+                android:title="contentresolver2"
                 android:id="@+id/submenu_item4"/>
             <item
                 android:title="粘贴"

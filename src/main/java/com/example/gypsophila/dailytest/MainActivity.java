@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.gypsophila.contentprovider.ContentResolverAty;
+import com.example.gypsophila.contentprovider.ContentResolverAty2;
 import com.example.gypsophila.contextmenu.ContextMenuAty;
 import com.example.gypsophila.notification.NotificationAty;
 import com.example.gypsophila.dialog.DialogAty;
@@ -175,11 +177,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             }
             case R.id.submenu_item3: {
-                Toast.makeText(this, "点击了打开", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "contentresolver1", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ContentResolverAty.class);
+                item.setIntent(intent);
                 break;
             }
             case R.id.submenu_item4: {
-                Toast.makeText(this, "点击了复制", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "contentresolver2", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ContentResolverAty2.class);
+                item.setIntent(intent);
                 break;
             }
             case R.id.submenu_item5: {

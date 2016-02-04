@@ -6,9 +6,13 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import com.example.gypsophila.dailytest.R;
 
@@ -40,6 +44,7 @@ public class SQLiteDataBaseAty extends Activity {
         //第一种是直接db.execSQL
         //db.execSQL("insert into usertb(name,age,sex) values('张三',18,'女')");
         //第二种是insert语句
+
         ContentValues values = new ContentValues();
         values.put("name", "张三");
         values.put("age", 19);
@@ -78,6 +83,41 @@ public class SQLiteDataBaseAty extends Activity {
         SimpleAdapter simpleAdapter = new SimpleAdapter(this, userList, R.layout.sqlite_layout, new String[]{"_id", "name", "age", "sex"}, new int[]{R.id.et_id, R.id.et_name, R.id.et_age, R.id.et_sex});
         listView_sqlite = (ListView) findViewById(R.id.listView_sqlite);
         listView_sqlite.setAdapter(simpleAdapter);
+        //给view注册上下文菜单，点击整个item并不会弹出
+        this.registerForContextMenu(listView_sqlite);
 
     }
+
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        menu.setHeaderIcon(R.mipmap.item1);
+        menu.setHeaderTitle("operation");
+        /**
+         * 使用代码动态添加，也可以使用xml加载
+         */
+        menu.add(1, 1, 1, "复制");
+        menu.add(1, 2, 1, "删除");
+
+
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        switch (item.getItemId()) {
+            case 1: {
+                Toast.makeText(this, "点击了复制", Toast.LENGTH_SHORT).show();
+                break;
+            }
+            case 2: {
+//                SQLiteDatabase db = openOrCreateDatabase("user.db", MODE_PRIVATE, null);
+                Toast.makeText(this, "点击了删除", Toast.LENGTH_SHORT).show();
+                break;
+            }
+        }
+        return super.onContextItemSelected(item);
+    }
+
 }

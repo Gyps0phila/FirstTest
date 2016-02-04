@@ -3,7 +3,10 @@
     package="com.example.gypsophila.dailytest" >
 
     <uses-permission android:name="android.permission.FLASHLIGHT" />
-    <uses-permission android:name="android.permission.vibrate" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
 
     <application
         android:allowBackup="true"
@@ -30,6 +33,8 @@
         <activity android:name="com.example.gypsophila.contextmenu.ContextMenuAty"/>
         <activity android:name="com.example.gypsophila.sharedpreferences.SharedPreferencesAty"/>
         <activity android:name="com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty"/>
+        <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty" />
+        <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty2" />
     </application>
 
 </manifest>
