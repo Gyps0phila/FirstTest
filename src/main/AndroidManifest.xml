@@ -29,6 +29,7 @@
         <activity android:name="com.example.gypsophila.notification.NotificationAty"/>
         <activity android:name="com.example.gypsophila.contextmenu.ContextMenuAty"/>
         <activity android:name="com.example.gypsophila.sharedpreferences.SharedPreferencesAty"/>
+        <activity android:name="com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty"/>
     </application>
 
 </manifest>

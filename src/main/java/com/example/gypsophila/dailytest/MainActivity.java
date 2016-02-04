@@ -18,6 +18,7 @@ import com.example.gypsophila.gallery.GalleryAty;
 import com.example.gypsophila.scrollview.ScrollViewAty;
 import com.example.gypsophila.seekbar.SeekBarAty;
 import com.example.gypsophila.sharedpreferences.SharedPreferencesAty;
+import com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty;
 import com.example.gypsophila.toast.ToastAty;
 import com.example.gypsophila.viewflipper.ViewFlipperAty;
 
@@ -97,17 +98,17 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         /**
          * 加载xml
          */
-        switch (item.getItemId()) {
-            case R.id.action_menu_item1: {
-                Toast.makeText(this, "点击了菜单一", Toast.LENGTH_SHORT).show();
-
-                break;
-            }
-            case R.id.action_menu_item2: {
-                Toast.makeText(this, "点击了菜单二", Toast.LENGTH_LONG).show();
-                break;
-            }
-        }
+//        switch (item.getItemId()) {
+//            case R.id.action_menu_item1: {
+//                Toast.makeText(this, "点击了菜单一", Toast.LENGTH_SHORT).show();
+//
+//                break;
+//            }
+//            case R.id.action_menu_item2: {
+//                Toast.makeText(this, "点击了菜单二", Toast.LENGTH_LONG).show();
+//                break;
+//            }
+//        }
 
         /**
          * 代码动态加载
@@ -161,14 +162,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         switch (item.getItemId()) {
             case R.id.submenu_item1: {
-                Toast.makeText(this, "点击了新建", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "sharedpreferences", Toast.LENGTH_SHORT).show();
                 //跳转页面
                 Intent intent = new Intent(MainActivity.this, SharedPreferencesAty.class);
                 item.setIntent(intent);
                 break;
             }
             case R.id.submenu_item2: {
-                Toast.makeText(this, "点击了保存", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "sqlitedatabase", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, SQLiteDataBaseAty.class);
+                item.setIntent(intent);
                 break;
             }
             case R.id.submenu_item3: {

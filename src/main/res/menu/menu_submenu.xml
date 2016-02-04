@@ -5,10 +5,10 @@
         android:title="文件">
         <menu>
             <item
-                android:title="新建"
+                android:title="sharedpreferences"
                 android:id="@+id/submenu_item1"/>
             <item
-                android:title="保存"
+                android:title="sqlitedatabase"
                 android:id="@+id/submenu_item2"/>
             <item
                 android:title="打开"
