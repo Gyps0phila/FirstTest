@@ -75,6 +75,12 @@
         android:id="@+id/btn_sharedPreferences"
         android:layout_toRightOf="@+id/btn_contextMenu"
         android:layout_below="@+id/btn_toast"/>
+    <Button
+        android:layout_below="@id/btn_contextMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="broadcast"
+        android:id="@+id/btn_broadcast"/>
 
 
 </RelativeLayout>

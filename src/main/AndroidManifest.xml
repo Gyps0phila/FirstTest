@@ -6,7 +6,7 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
-
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
 
     <application
         android:allowBackup="true"
@@ -35,6 +35,18 @@
         <activity android:name="com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty"/>
         <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty" />
         <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty2" />
+        <activity android:name="com.example.gypsophila.broadcast.BroadCastAty" />
+
+        <receiver android:name="com.example.gypsophila.broadcast.BCR1">
+            <intent-filter>
+                <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.gypsophila.broadcast.BCR2">
+            <intent-filter>
+                <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

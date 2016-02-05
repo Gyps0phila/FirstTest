@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.gypsophila.broadcast.BroadCastAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty2;
 import com.example.gypsophila.contextmenu.ContextMenuAty;
@@ -28,7 +29,7 @@ import com.example.gypsophila.viewflipper.ViewFlipperAty;
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     private Button fragment,viewPager,btn_viewFlipper,btn_scrollView,btn_gallery;
     private Button btn_seekBar,btn_toast,btn_dialog,btn_notification,btn_contextMenu;
-    private Button btn_sharedPreferences;
+    private Button btn_sharedPreferences,btn_broadcast;
     private int mark;
 
     @Override
@@ -46,6 +47,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_notification = (Button) findViewById(R.id.btn_notification);
         btn_contextMenu = (Button) findViewById(R.id.btn_contextMenu);
         btn_sharedPreferences = (Button) findViewById(R.id.btn_sharedPreferences);
+        btn_broadcast = (Button) findViewById(R.id.btn_broadcast);
         viewPager.setOnClickListener(this);
         btn_viewFlipper.setOnClickListener(this);
         btn_scrollView.setOnClickListener(this);
@@ -56,6 +58,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_notification.setOnClickListener(this);
         btn_contextMenu.setOnClickListener(this);
         btn_sharedPreferences.setOnClickListener(this);
+        btn_broadcast.setOnClickListener(this);
 
     }
 
@@ -259,6 +262,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_sharedPreferences: {
                 Intent intent = new Intent(this, SharedPreferencesAty.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_broadcast: {
+                Intent intent = new Intent(this, BroadCastAty.class);
                 startActivity(intent);
                 break;
             }
