@@ -20,6 +20,7 @@ import com.example.gypsophila.dialog.DialogAty;
 import com.example.gypsophila.gallery.GalleryAty;
 import com.example.gypsophila.scrollview.ScrollViewAty;
 import com.example.gypsophila.seekbar.SeekBarAty;
+import com.example.gypsophila.service.ServiceAty;
 import com.example.gypsophila.sharedpreferences.SharedPreferencesAty;
 import com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty;
 import com.example.gypsophila.toast.ToastAty;
@@ -29,7 +30,7 @@ import com.example.gypsophila.viewflipper.ViewFlipperAty;
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
     private Button fragment,viewPager,btn_viewFlipper,btn_scrollView,btn_gallery;
     private Button btn_seekBar,btn_toast,btn_dialog,btn_notification,btn_contextMenu;
-    private Button btn_sharedPreferences,btn_broadcast;
+    private Button btn_sharedPreferences,btn_broadcast,btn_service;
     private int mark;
 
     @Override
@@ -48,6 +49,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_contextMenu = (Button) findViewById(R.id.btn_contextMenu);
         btn_sharedPreferences = (Button) findViewById(R.id.btn_sharedPreferences);
         btn_broadcast = (Button) findViewById(R.id.btn_broadcast);
+        btn_service = (Button) findViewById(R.id.btn_service);
         viewPager.setOnClickListener(this);
         btn_viewFlipper.setOnClickListener(this);
         btn_scrollView.setOnClickListener(this);
@@ -59,6 +61,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         btn_contextMenu.setOnClickListener(this);
         btn_sharedPreferences.setOnClickListener(this);
         btn_broadcast.setOnClickListener(this);
+        btn_service.setOnClickListener(this);
 
     }
 
@@ -267,6 +270,11 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_broadcast: {
                 Intent intent = new Intent(this, BroadCastAty.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_service: {
+                Intent intent = new Intent(this, ServiceAty.class);
                 startActivity(intent);
                 break;
             }

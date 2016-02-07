@@ -36,7 +36,11 @@
         <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty" />
         <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty2" />
         <activity android:name="com.example.gypsophila.broadcast.BroadCastAty" />
+        <activity android:name="com.example.gypsophila.service.ServiceAty" />
 
+        <service
+            android:name="com.example.gypsophila.service.MyStartService" />
+        <service android:name="com.example.gypsophila.service.MyBindService" />
         <receiver android:name="com.example.gypsophila.broadcast.BCR1">
             <intent-filter>
                 <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>

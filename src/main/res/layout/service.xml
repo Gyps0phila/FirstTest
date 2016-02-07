@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startService"
+        android:onClick="doClick"
+        android:id="@+id/btn_startService" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stopService"
+        android:onClick="doClick"
+        android:id="@+id/btn_stopService" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="bindService"
+        android:onClick="doClick"
+        android:id="@+id/btn_bindService" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="播放"
+        android:onClick="doClick"
+        android:id="@+id/btn_play" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="暂停"
+        android:onClick="doClick"
+        android:id="@+id/btn_pause" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="下一首"
+        android:onClick="doClick"
+        android:id="@+id/btn_next" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上一首"
+        android:onClick="doClick"
+        android:id="@+id/btn_previous" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="unbindService"
+        android:onClick="doClick"
+        android:id="@+id/btn_unbindService" />
+</LinearLayout>
