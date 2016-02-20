@@ -7,6 +7,11 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
 
     <application
         android:allowBackup="true"
@@ -37,6 +42,7 @@
         <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty2" />
         <activity android:name="com.example.gypsophila.broadcast.BroadCastAty" />
         <activity android:name="com.example.gypsophila.service.ServiceAty" />
+        <activity android:name="com.example.gypsophila.systemservice.SystemServiceAty" />
 
         <service
             android:name="com.example.gypsophila.service.MyStartService" />

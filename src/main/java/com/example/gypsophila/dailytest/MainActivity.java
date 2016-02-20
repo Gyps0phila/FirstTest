@@ -23,6 +23,7 @@ import com.example.gypsophila.seekbar.SeekBarAty;
 import com.example.gypsophila.service.ServiceAty;
 import com.example.gypsophila.sharedpreferences.SharedPreferencesAty;
 import com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty;
+import com.example.gypsophila.systemservice.SystemServiceAty;
 import com.example.gypsophila.toast.ToastAty;
 import com.example.gypsophila.viewflipper.ViewFlipperAty;
 
@@ -282,6 +283,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
     }
 
+    public void doClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_systemservice: {
+                Intent intent = new Intent(this, SystemServiceAty.class);
+                startActivity(intent);
+                break;
+            }
+        }
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if(requestCode==1&&resultCode==2) {
