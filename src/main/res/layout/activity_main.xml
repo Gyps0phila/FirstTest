@@ -96,6 +96,22 @@
         android:onClick="doClick"
         android:layout_below="@+id/btn_contextMenu"
         android:layout_toRightOf="@+id/btn_service"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="doClick"
+        android:text="file"
+        android:id="@+id/btn_file"
+        android:layout_below="@+id/btn_broadcast"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_baseadapter"
+        android:text="baseadapter"
+        android:layout_below="@id/btn_broadcast"
+        android:layout_toRightOf="@+id/btn_file"
+        android:onClick="doClick"/>
 
 
 </RelativeLayout>

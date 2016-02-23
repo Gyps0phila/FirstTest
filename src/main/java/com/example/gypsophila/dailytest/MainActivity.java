@@ -11,10 +11,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.gypsophila.baseadapter.BaseAdapterAty;
 import com.example.gypsophila.broadcast.BroadCastAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty2;
 import com.example.gypsophila.contextmenu.ContextMenuAty;
+import com.example.gypsophila.file.FileAty;
 import com.example.gypsophila.notification.NotificationAty;
 import com.example.gypsophila.dialog.DialogAty;
 import com.example.gypsophila.gallery.GalleryAty;
@@ -287,6 +289,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         switch (v.getId()) {
             case R.id.btn_systemservice: {
                 Intent intent = new Intent(this, SystemServiceAty.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_file: {
+                Intent intent = new Intent(this, FileAty.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_baseadapter: {
+                Intent intent = new Intent(this, BaseAdapterAty.class);
                 startActivity(intent);
                 break;
             }
