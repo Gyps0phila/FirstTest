@@ -112,6 +112,14 @@
         android:layout_below="@id/btn_broadcast"
         android:layout_toRightOf="@+id/btn_file"
         android:onClick="doClick"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asynctask"
+        android:id="@+id/btn_asynctask"
+        android:layout_below="@+id/btn_broadcast"
+        android:layout_toRightOf="@id/btn_baseadapter"
+        android:onClick="doClick"/>
 
 
 </RelativeLayout>
