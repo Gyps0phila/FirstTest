@@ -50,6 +50,7 @@
         <activity android:name="com.example.gypsophila.asynctask.MyAsyncTaskAty" />
         <activity android:name="com.example.gypsophila.asynctask.ImageTestAty" />
         <activity android:name="com.example.gypsophila.asynctask.ProgressBarTestAty" />
+        <activity android:name="com.example.gypsophila.asynctaskload.AsyncTaskLoadAty" />
 
         <service
             android:name="com.example.gypsophila.service.MyStartService" />

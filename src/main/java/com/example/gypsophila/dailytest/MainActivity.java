@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.gypsophila.asynctask.MyAsyncTaskAty;
+import com.example.gypsophila.asynctaskload.AsyncTaskLoadAty;
 import com.example.gypsophila.baseadapter.BaseAdapterAty;
 import com.example.gypsophila.broadcast.BroadCastAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty;
@@ -305,6 +306,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_asynctask: {
                 startActivity(new Intent(this, MyAsyncTaskAty.class));
+                break;
+            }
+            case R.id.btn_asyncload: {
+                startActivity(new Intent(this, AsyncTaskLoadAty.class));
                 break;
             }
         }
