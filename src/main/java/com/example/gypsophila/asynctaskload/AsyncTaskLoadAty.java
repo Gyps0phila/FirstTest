@@ -126,7 +126,7 @@ public class AsyncTaskLoadAty extends Activity {
         @Override
         protected void onPostExecute(List<NewsBean> newsBeans) {
             super.onPostExecute(newsBeans);
-            NewsAdapter adapter = new NewsAdapter(newsBeans, AsyncTaskLoadAty.this);
+            NewsAdapter adapter = new NewsAdapter(newsBeans, AsyncTaskLoadAty.this,lv);
             lv.setAdapter(adapter);
         }
     }

@@ -7,6 +7,9 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.LruCache;
 import android.widget.ImageView;
+import android.widget.ListView;
+
+import com.example.gypsophila.dailytest.R;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
@@ -14,6 +17,8 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by Gypsophila on 2016/2/25.
@@ -24,7 +29,12 @@ public class ImageLoader {
     private ImageView mImageView;
     private LruCache<String,Bitmap> mCaches;
 
-    public ImageLoader() {
+    private ListView mListView;
+    private Set<NewsAsyncTask> mTasks;
+
+    public ImageLoader(ListView listView) {
+        mListView = listView;
+        mTasks = new HashSet<NewsAsyncTask>();
         int maxMemory = (int) Runtime.getRuntime().maxMemory();
         int maxSize = maxMemory / 4;
         mCaches = new LruCache<String, Bitmap>(maxSize) {
@@ -34,6 +44,8 @@ public class ImageLoader {
                 return value.getByteCount();
             }
         };
+
+
     }
 
     //向缓存中增加bitmap，先检查缓存中是否已存在该图片
@@ -106,23 +118,53 @@ public class ImageLoader {
     }
 
 
+    public void loadImages(int start,int end) {
+        for (int i = start; i < end; i++) {
+            String url = NewsAdapter.URLS[i];
+            //显示图片先查看缓存中是否存在，没有才通过网络加载
+            Bitmap bitmap = getBitmapFromCache(url);
+            if (bitmap == null) {
+                NewsAsyncTask task = new NewsAsyncTask(url);
+                task.execute(url);
+                mTasks.add(task);
+//                new NewsAsyncTask(imageView, url).execute(url);
+            } else {
+                ImageView imageView = (ImageView) mListView.findViewWithTag(url);
+                imageView.setImageBitmap(bitmap);
+            }
+        }
+    }
+
     public void showImageByAsyncTask(ImageView imageView, String url) {
         //显示图片先查看缓存中是否存在，没有才通过网络加载
         //如果存在，而当前又是在主线程中，所以可以直接更新ui
         Bitmap bitmap = getBitmapFromCache(url);
         if (bitmap == null) {
-            new NewsAsyncTask(imageView, url).execute(url);
+//            new NewsAsyncTask(url).execute(url);
+            /**
+             * 设置默认图片的原因是适配器的getview方法之前是加载图片，现在转移为了loadimages方法中加载
+             * 因为滑动时我们并不需要去加载图片，滑动停止才加载
+             */
+            imageView.setImageResource(R.mipmap.ic_launcher);
         } else {
             imageView.setImageBitmap(bitmap);
         }
     }
 
+    public void cancelAllTasks() {
+        if (mTasks != null) {
+            for (NewsAsyncTask task : mTasks) {
+                task.cancel(false);
+            }
+        }
+    }
+
     private class NewsAsyncTask extends AsyncTask<String, Void, Bitmap> {
 
-        private ImageView mImageView;
+//        private ImageView mImageView;
         private String mUrl;
-        public NewsAsyncTask(ImageView imageView,String url) {
-            mImageView = imageView;
+        public NewsAsyncTask(String url) {
+//            mImageView = imageView;
             mUrl = url;
         }
         @Override
@@ -139,10 +181,14 @@ public class ImageLoader {
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
-            if (mImageView.getTag().equals(mUrl)) {
-                mImageView.setImageBitmap(bitmap);
+//            if (mImageView.getTag().equals(mUrl)) {
+//                mImageView.setImageBitmap(bitmap);
+//            }
+            ImageView imageView = (ImageView) mListView.findViewWithTag(mUrl);
+            if (imageView != null && bitmap != null) {
+                imageView.setImageBitmap(bitmap);
             }
-
+            mTasks.remove(this);
         }
     }
 }

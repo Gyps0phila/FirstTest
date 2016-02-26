@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.gypsophila.dailytest.R;
@@ -15,16 +17,25 @@ import java.util.List;
 /**
  * Created by Gypsophila on 2016/2/25.
  */
-public class NewsAdapter extends BaseAdapter {
+public class NewsAdapter extends BaseAdapter implements AbsListView.OnScrollListener{
 
     private List<NewsBean> mList;
     private LayoutInflater mInflater;
     private ImageLoader mImageLoader;
+    private int mStart,mEnd;
+    public static String[] URLS;
+    private boolean mFirstIn;
 
-    public NewsAdapter(List<NewsBean> list, Context context) {
+    public NewsAdapter(List<NewsBean> list, Context context,ListView listView) {
+        mFirstIn = true;
         mList = list;
         mInflater = LayoutInflater.from(context);
-        mImageLoader = new ImageLoader();
+        mImageLoader = new ImageLoader(listView);
+        URLS = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            URLS[i] = list.get(i).imgUrl;
+        }
+        listView.setOnScrollListener(this);
     }
     @Override
     public int getCount() {
@@ -68,6 +79,40 @@ public class NewsAdapter extends BaseAdapter {
         viewHolder.title.setText(mList.get(position).title);
         viewHolder.content.setText(mList.get(position).content);
         return convertView;
+    }
+
+    /**
+     * 这个第一次加载时不会被调用
+     * @param view
+     * @param scrollState
+     */
+    @Override
+    public void onScrollStateChanged(AbsListView view, int scrollState) {
+        if (scrollState == SCROLL_STATE_IDLE) {
+            //停止滑动，加载可见项
+            mImageLoader.loadImages(mStart , mEnd);
+        } else {
+            //停止加载任务
+            mImageLoader.cancelAllTasks();
+        }
+    }
+
+    /**
+     * 这个回调会被多次调用，初始化调用时候visibleItemCount=0,item还没有被加载，所以要跳过去>0才可
+     * @param view
+     * @param firstVisibleItem
+     * @param visibleItemCount
+     * @param totalItemCount
+     */
+    @Override
+    public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+        mStart = firstVisibleItem;
+        mEnd = firstVisibleItem + visibleItemCount;
+        //第一次预加载调用
+        if (mFirstIn && visibleItemCount > 0) {
+            mImageLoader.loadImages(mStart, mEnd);
+            mFirstIn = false;
+        }
     }
 
     class ViewHolder {
