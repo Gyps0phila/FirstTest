@@ -51,6 +51,9 @@
         <activity android:name="com.example.gypsophila.asynctask.ImageTestAty" />
         <activity android:name="com.example.gypsophila.asynctask.ProgressBarTestAty" />
         <activity android:name="com.example.gypsophila.asynctaskload.AsyncTaskLoadAty" />
+        <activity android:name="com.example.gypsophila.http.HttpAty" />
+        <activity android:name="com.example.gypsophila.http.HttpImageAty" />
+        <activity android:name="com.example.gypsophila.http.HttpWebViewAty" />
 
         <service
             android:name="com.example.gypsophila.service.MyStartService" />

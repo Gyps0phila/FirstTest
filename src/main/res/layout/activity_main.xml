@@ -127,6 +127,14 @@
         android:onClick="doClick"
         android:id="@+id/btn_asyncload"
         android:layout_below="@id/btn_file"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http通信"
+        android:layout_below="@id/btn_file"
+        android:layout_toRightOf="@+id/btn_asyncload"
+        android:onClick="doClick"
+        android:id="@+id/btn_http"/>
 
 
 </RelativeLayout>
