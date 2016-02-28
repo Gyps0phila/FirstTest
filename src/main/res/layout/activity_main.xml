@@ -135,6 +135,14 @@
         android:layout_toRightOf="@+id/btn_asyncload"
         android:onClick="doClick"
         android:id="@+id/btn_http"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="http通信2"
+        android:id="@+id/btn_httpconn"
+        android:layout_below="@+id/btn_file"
+        android:layout_toRightOf="@+id/btn_http"
+        android:onClick="doClick"/>
 
 
 </RelativeLayout>

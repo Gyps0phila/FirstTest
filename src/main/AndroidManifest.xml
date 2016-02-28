@@ -54,6 +54,9 @@
         <activity android:name="com.example.gypsophila.http.HttpAty" />
         <activity android:name="com.example.gypsophila.http.HttpImageAty" />
         <activity android:name="com.example.gypsophila.http.HttpWebViewAty" />
+        <activity android:name="com.example.gypsophila.httpconn.HttpConnAty" />
+        <activity android:name="com.example.gypsophila.httpconn.HttpConnAty1" />
+
 
         <service
             android:name="com.example.gypsophila.service.MyStartService" />
