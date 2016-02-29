@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/json_img"/>
+    <RelativeLayout
+        android:padding="4dp"
+        android:layout_toEndOf="@+id/json_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/json_name"
+            android:text="name"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/json_age"
+            android:layout_below="@+id/json_name"
+            android:text="age"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/json_school1"
+            android:layout_below="@+id/json_age"
+            android:text="school1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/json_school2"
+            android:layout_below="@+id/json_school1"
+            android:text="school2"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

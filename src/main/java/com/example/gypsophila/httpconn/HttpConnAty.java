@@ -23,6 +23,9 @@ public class HttpConnAty extends Activity {
             case R.id.btn_httpconn1: {
                 startActivity(new Intent(this,HttpConnAty1.class));
             }
+            case R.id.btn_httpconn2: {
+                startActivity(new Intent(this, JsonAty.class));
+            }
         }
     }
 

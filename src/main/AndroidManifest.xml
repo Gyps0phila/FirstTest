@@ -56,6 +56,8 @@
         <activity android:name="com.example.gypsophila.http.HttpWebViewAty" />
         <activity android:name="com.example.gypsophila.httpconn.HttpConnAty" />
         <activity android:name="com.example.gypsophila.httpconn.HttpConnAty1" />
+        <activity android:name="com.example.gypsophila.httpconn.JsonAty" />
+
 
 
         <service
