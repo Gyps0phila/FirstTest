@@ -30,6 +30,19 @@ public class HttpConnThread1 extends Thread {
      * get方式要将参数在url上添加好
      */
     public void doGet() {
+
+        /**
+         * 此时我没有URLEncoder.encode("张三", "utf-8"),java ee控制台显示也是正确的，没有乱码。
+         *突然有个想法：应该是URL类在这个时候帮忙转的吧？！
+         */
+        //        try {
+//             //get方式将参数在浏览器url地址上显示出来name=%E6%98%AF&age=1，所以中文需要被转码
+//             //而不使用URLEncoder方法转码也可以正确在java ee控制台显示原因可能是android手机操作系统，默认编码是utf-8
+//            connUrl = mUrl + "?name=" + URLEncoder.encode(mName, "utf-8") + "&age=" + mAge;
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        }
+
         mUrl = mUrl + "?name=" + mName + "&age=" + mAge;
         try {
             URL url = new URL(mUrl);
