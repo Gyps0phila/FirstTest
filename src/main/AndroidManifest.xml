@@ -57,6 +57,9 @@
         <activity android:name="com.example.gypsophila.httpconn.HttpConnAty" />
         <activity android:name="com.example.gypsophila.httpconn.HttpConnAty1" />
         <activity android:name="com.example.gypsophila.httpconn.JsonAty" />
+        <activity android:name="com.example.gypsophila.httpconn.XmlAty" />
+        <activity android:name="com.example.gypsophila.httpconn.DownloadAty" />
+
 
 
 

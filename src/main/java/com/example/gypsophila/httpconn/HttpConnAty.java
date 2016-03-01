@@ -22,11 +22,21 @@ public class HttpConnAty extends Activity {
         switch (v.getId()) {
             case R.id.btn_httpconn1: {
                 startActivity(new Intent(this,HttpConnAty1.class));
+                break;
             }
             case R.id.btn_httpconn2: {
                 startActivity(new Intent(this, JsonAty.class));
-
+                break;
             }
+            case R.id.btn_httpconn3: {
+                startActivity(new Intent(this, XmlAty.class));
+                break;
+            }
+            case R.id.btn_httpconn4: {
+                startActivity(new Intent(this, DownloadAty.class));
+                break;
+            }
+
         }
     }
 

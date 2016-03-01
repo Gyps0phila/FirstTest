@@ -15,4 +15,19 @@
         android:onClick="doClick"
         android:id="@+id/btn_httpconn2"
         android:layout_below="@+id/btn_httpconn1"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_httpconn3"
+        android:onClick="doClick"
+        android:text="xml"
+        android:layout_below="@+id/btn_httpconn2"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_httpconn4"
+        android:text="多线程下载图片"
+        android:onClick="doClick"
+        android:layout_below="@+id/btn_httpconn3"/>
+
 </RelativeLayout>
