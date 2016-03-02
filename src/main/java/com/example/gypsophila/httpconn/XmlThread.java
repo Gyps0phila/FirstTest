@@ -1,6 +1,7 @@
 package com.example.gypsophila.httpconn;
 
 import android.os.Handler;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -14,6 +15,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by Gypsophila on 2016/3/1.

@@ -36,6 +36,10 @@ public class HttpConnAty extends Activity {
                 startActivity(new Intent(this, DownloadAty.class));
                 break;
             }
+            case R.id.btn_httpconn5: {
+                startActivity(new Intent(this, HttpUploadAty.class));
+                break;
+            }
 
         }
     }
