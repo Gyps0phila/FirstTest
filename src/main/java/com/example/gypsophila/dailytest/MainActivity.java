@@ -19,6 +19,7 @@ import com.example.gypsophila.contentprovider.ContentResolverAty;
 import com.example.gypsophila.contentprovider.ContentResolverAty2;
 import com.example.gypsophila.contextmenu.ContextMenuAty;
 import com.example.gypsophila.file.FileAty;
+import com.example.gypsophila.handler.HandlerAty;
 import com.example.gypsophila.http.HttpAty;
 import com.example.gypsophila.httpconn.HttpConnAty;
 import com.example.gypsophila.notification.NotificationAty;
@@ -320,6 +321,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             }
             case R.id.btn_httpconn: {
                 startActivity(new Intent(this, HttpConnAty.class));
+                break;
+            }
+            case R.id.btn_handler: {
+                startActivity(new Intent(this, HandlerAty.class));
                 break;
             }
         }

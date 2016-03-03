@@ -60,6 +60,7 @@
         <activity android:name="com.example.gypsophila.httpconn.XmlAty" />
         <activity android:name="com.example.gypsophila.httpconn.DownloadAty" />
         <activity android:name="com.example.gypsophila.httpconn.HttpUploadAty" />
+        <activity android:name="com.example.gypsophila.handler.HandlerAty" />
 
 
 
