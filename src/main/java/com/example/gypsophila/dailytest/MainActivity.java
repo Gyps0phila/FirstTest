@@ -327,6 +327,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(new Intent(this, HandlerAty.class));
                 break;
             }
+            case R.id.btn_sqlite: {
+                startActivity(new Intent(this, SQLiteDataBaseAty.class));
+                break;
+            }
         }
     }
     @Override

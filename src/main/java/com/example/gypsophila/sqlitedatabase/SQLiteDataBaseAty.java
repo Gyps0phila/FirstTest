@@ -43,12 +43,13 @@ public class SQLiteDataBaseAty extends Activity {
         //插入几条数据
         //第一种是直接db.execSQL
         //db.execSQL("insert into usertb(name,age,sex) values('张三',18,'女')");
-        //第二种是insert语句
+        //第二种是insert语句(插入的表名，空列的默认值，键值)
 
         ContentValues values = new ContentValues();
         values.put("name", "张三");
         values.put("age", 19);
         values.put("sex", "男");
+
         db.insert("usertb", null, values);
 
         values.clear();
