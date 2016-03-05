@@ -158,6 +158,14 @@
         android:layout_below="@+id/btn_asyncload"
         android:onClick="doClick"
         android:layout_toRightOf="@+id/btn_handler"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contentProvider"
+        android:id="@+id/btn_cr"
+        android:layout_below="@+id/btn_asyncload"
+        android:onClick="doClick"
+        android:layout_toRightOf="@+id/btn_sqlite"/>
 
 
 </RelativeLayout>

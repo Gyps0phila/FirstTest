@@ -2,6 +2,7 @@ package com.example.gypsophila.file;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -32,17 +33,20 @@ public class FileAty extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.file);
+        Log.i("fileinfo", Environment.getExternalStorageState());
+
+
         /*  可能由于未root，其他路径写入失败*/
-        File file = new File("/data/data/com.example.gypsophila.dailytest/files/test");
-        if (!file.exists()) {
-            try {
-                file.createNewFile();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        } else {
-            Toast.makeText(this, "文件已经存在", Toast.LENGTH_SHORT).show();
-        }
+//        File file = new File("/data/data/com.example.gypsophila.dailytest/files/test");
+//        if (!file.exists()) {
+//            try {
+//                file.createNewFile();
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        } else {
+//            Toast.makeText(this, "文件已经存在", Toast.LENGTH_SHORT).show();
+//        }
 //        file.delete();
 //        File file1 = this.getFilesDir();//这个目录是当前应用程序默认的数据存储目录
 //        Log.i("fileinfo", file1.toString());
