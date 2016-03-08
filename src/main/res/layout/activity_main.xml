@@ -167,5 +167,14 @@
         android:onClick="doClick"
         android:layout_toRightOf="@+id/btn_sqlite"/>
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="map"
+        android:id="@+id/btn_map"
+        android:layout_below="@id/btn_handler"
+        android:onClick="doClick"/>
+
+
 
 </RelativeLayout>
