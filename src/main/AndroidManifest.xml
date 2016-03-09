@@ -32,7 +32,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.gypsophila.dailytest.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -73,7 +73,8 @@
         <activity android:name="com.example.gypsophila.httpconn.HttpUploadAty" />
         <activity android:name="com.example.gypsophila.handler.HandlerAty" />
         <activity android:name="com.example.gypsophila.baidumap.BaiduMapAty" />
-
+        <activity android:name=".BtnListViewAty" />
+        <activity android:name="com.example.gypsophila.sensor.SensorAty" />
 
 
 

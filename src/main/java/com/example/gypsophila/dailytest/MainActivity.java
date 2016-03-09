@@ -340,6 +340,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 startActivity(new Intent(this, BaiduMapAty.class));
                 break;
             }
+            case R.id.btn_listview: {
+                startActivity(new Intent(this, BtnListViewAty.class));
+                break;
+            }
         }
     }
     @Override
