@@ -68,6 +68,7 @@ public class SensorAty extends BaseAty {
     private SensorEventListener listener = new SensorEventListener() {
         float[] accelerometerValues = new float[3];
         float[] magneticValues = new float[3];
+        //旋转起始角度
         private float lastRotateDegree;
         @Override
         public void onSensorChanged(SensorEvent event) {
@@ -97,6 +98,7 @@ public class SensorAty extends BaseAty {
             SensorManager.getOrientation(r, values);
 //            Log.i("SensorAty", "values[0] is " + Math.toDegrees(values[0]));
             //计算出的角度取反，用于旋转指南针背景图
+
             float rotateDegree = -(float) Math.toDegrees(values[0]);
             if (Math.abs(rotateDegree - lastRotateDegree) > 1) {
                 RotateAnimation animation = new RotateAnimation(lastRotateDegree, rotateDegree, Animation.RELATIVE_TO_SELF
