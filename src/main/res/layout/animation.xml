@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha透明度"
+        android:id="@+id/btn_alpha"
+        android:onClick="doClick"/>
+    <Button
+        android:layout_toRightOf="@+id/btn_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="scale缩放"
+        android:id="@+id/btn_scale"
+        android:onClick="doClick"/>
+    <Button
+        android:layout_toRightOf="@+id/btn_scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="translate位移"
+        android:id="@+id/btn_translate"
+        android:onClick="doClick"
+        />
+    <Button
+        android:layout_below="@+id/btn_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rotate旋转"
+        android:onClick="doClick"
+        android:id="@+id/btn_rotate"/>
+
+    <Button
+        android:layout_below="@id/btn_alpha"
+        android:layout_toRightOf="@+id/btn_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="续播1"
+        android:id="@+id/continue1"
+        android:onClick="doClick"/>
+    <Button
+        android:layout_below="@+id/btn_alpha"
+        android:layout_toRightOf="@+id/continue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="续播2"
+        android:id="@+id/continue2"
+        android:onClick="doClick"/>
+
+    <Button
+        android:layout_below="@+id/btn_alpha"
+        android:layout_toRightOf="@+id/continue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="闪烁"
+        android:id="@+id/btn_flash"
+        android:onClick="doClick"
+        />
+    <Button
+        android:layout_below="@+id/btn_rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="overridePendingTransition"
+        android:id="@+id/btn_in_out"
+        android:onClick="doClick"
+        />
+    <Button
+        android:layout_below="@+id/btn_rotate"
+        android:layout_toRightOf="@+id/btn_in_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="布局动画"
+        android:id="@+id/btn_layout"
+        android:onClick="doClick"
+        />
+    <Button
+        android:layout_below="@+id/btn_in_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="逐帧动画"
+        android:id="@+id/frame"
+        android:onClick="doClick"
+        />
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/ani_img"/>
+
+</RelativeLayout>

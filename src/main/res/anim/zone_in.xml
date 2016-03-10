@@ -9,6 +9,14 @@
         android:toYScale="1.0"
         android:pivotX="50%"
         android:pivotY="50%" />
+    <!-- 应该从页面顶端开始想象移动，两种不同进入和退出方式成功！似乎进入和退出对应起来更合理-->
+    <!--<translate-->
+        <!--android:duration="3000"-->
+        <!--android:fromXDelta="100%"-->
+        <!--android:fromYDelta="0%"-->
+        <!--android:toXDelta="0%"-->
+        <!--android:toYDelta="0%"-->
+        <!--/>-->
 
     <alpha
         android:duration="1000"

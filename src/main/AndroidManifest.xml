@@ -76,6 +76,8 @@
         <activity android:name=".BtnListViewAty" />
         <activity android:name="com.example.gypsophila.sensor.SensorAty" />
         <activity android:name="com.example.gypsophila.sensor.SensorCPAty" />
+        <activity android:name="com.example.gypsophila.animation.AnimationAty" />
+        <activity android:name="com.example.gypsophila.animation.AniListViewAty" />
 
 
 
