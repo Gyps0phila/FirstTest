@@ -59,20 +59,22 @@ public class FuncAdapter extends BaseAdapter {
 
         viewHolder.imageView.setImageResource(mList.get(position).getResId());
         viewHolder.textView.setText(mList.get(position).getFuncDescription());
-        viewHolder.textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Toast.makeText(mContext,"you click"+mList.get(position).getFuncDescription(),Toast.LENGTH_SHORT).show();
-//                String name = "com.example.gypsophila.dailytest.MainActivity";
-                String name = mList.get(position).getFuncDescription();
-                try {
-                    mContext.startActivity(new Intent(mContext, Class.forName(name)));//可行
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                    Log.i("nofound", name);
-                }
-            }
-        });
+        //！！由于在textview这边设置了点击事件监听，导致点击onItemClickListener点中文本时无效！
+
+//        viewHolder.textView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Toast.makeText(mContext,"you click"+mList.get(position).getFuncDescription(),Toast.LENGTH_SHORT).show();
+////                String name = "com.example.gypsophila.dailytest.MainActivity";
+//                String name = mList.get(position).getFuncDescription();
+////                try {
+////                    mContext.startActivity(new Intent(mContext, Class.forName(name)));//可行
+////                } catch (ClassNotFoundException e) {
+////                    e.printStackTrace();
+////                    Log.i("nofound", name);
+////                }
+//            }
+//        });
 
         return convertView;
     }

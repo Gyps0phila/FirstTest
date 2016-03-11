@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -34,6 +35,18 @@ public class BtnListViewAty extends BaseAty {
 
         init();
         funcListView.setAdapter(adapter);
+
+        funcListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FuncBean bean = funcList.get(position);
+                try {
+                    startActivity(new Intent(BtnListViewAty.this,Class.forName(bean.getFuncDescription())));
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     private void init() {
@@ -59,8 +72,19 @@ public class BtnListViewAty extends BaseAty {
         bean2.setResId(R.mipmap.item1);
         bean2.setFuncDescription("com.example.gypsophila.animation.AnimationAty");
         funcList.add(bean2);
+
+        FuncBean bean3 = new FuncBean();
+        bean3.setResId(R.mipmap.item2);
+        bean3.setFuncDescription("com.example.gypsophila.title.TitleAty1");
+        funcList.add(bean3);
         adapter = new FuncAdapter(this, funcList);
+
+        FuncBean bean4 = new FuncBean();
+        bean4.setResId(R.mipmap.item11);
+        bean4.setFuncDescription("com.example.gypsophila.msg.MsgAty");
+        funcList.add(bean4);
         //上下文菜单长按，点击区域如果是textview似乎没有反映
+        // 由于在textview这边设置了点击事件监听，导致点击onItemClickListener点中文本时无效！
         this.registerForContextMenu(funcListView);
 
        /* ArrayList<FuncBean> i1 = new ArrayList<>();

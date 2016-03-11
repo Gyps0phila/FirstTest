@@ -78,6 +78,8 @@
         <activity android:name="com.example.gypsophila.sensor.SensorCPAty" />
         <activity android:name="com.example.gypsophila.animation.AnimationAty" />
         <activity android:name="com.example.gypsophila.animation.AniListViewAty" />
+        <activity android:name="com.example.gypsophila.title.TitleAty1" />
+        <activity android:name="com.example.gypsophila.msg.MsgAty" />
 
 
 

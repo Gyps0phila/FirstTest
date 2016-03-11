@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
-        android:background="#ff0000">
+        android:background="@mipmap/message_left">
         <TextView
             android:gravity="center"
             android:textSize="20sp"
@@ -24,7 +24,7 @@
         android:id="@+id/right_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#004220"
+        android:background="@mipmap/message_right"
         android:layout_gravity="right">
         <TextView
             android:id="@+id/right_msg"
