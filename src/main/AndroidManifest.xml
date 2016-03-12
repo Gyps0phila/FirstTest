@@ -80,6 +80,8 @@
         <activity android:name="com.example.gypsophila.animation.AniListViewAty" />
         <activity android:name="com.example.gypsophila.title.TitleAty1" />
         <activity android:name="com.example.gypsophila.msg.MsgAty" />
+        <activity android:name="com.example.gypsophila.fragmentpractice.NewsAty" />
+        <activity android:name="com.example.gypsophila.fragmentpractice.NewsContentAty" />
 
 
 
