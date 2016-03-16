@@ -98,6 +98,11 @@
 
         <activity android:name="com.example.weather.service.MyIntentServiceAty" />
 
+        <activity android:name="com.example.weather.service.LongRunningServiceAty" />
+
+        <service android:name="com.example.weather.service.LongRunningService" />
+        <receiver android:name="com.example.weather.service.AlarmReceiver" />
+
         <service android:name="com.example.weather.service.MyIntentService" />
 
 

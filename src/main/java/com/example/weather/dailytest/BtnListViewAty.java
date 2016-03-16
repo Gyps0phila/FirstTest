@@ -116,6 +116,11 @@ public class BtnListViewAty extends BaseAty {
         bean11.setFuncDescription("com.example.weather.service.MyIntentServiceAty");
         funcList.add(bean11);
 
+        FuncBean bean12 = new FuncBean();
+        bean12.setResId(R.mipmap.item11);
+        bean12.setFuncDescription("com.example.weather.service.LongRunningServiceAty");
+        funcList.add(bean12);
+
         //上下文菜单长按，点击区域如果是textview似乎没有反映
         // 由于在textview这边设置了点击事件监听，导致点击onItemClickListener点中文本时无效！
         this.registerForContextMenu(funcListView);
