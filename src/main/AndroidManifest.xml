@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.gypsophila.dailytest" >
+    package="com.example.weather.dailytest" >
 
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -14,6 +14,8 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission. SEND_SMS" />
     <!-- 百度地图所需要的-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -26,13 +28,14 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.gypsophila.dailytest.MainActivity"
+            android:name="com.example.weather.dailytest.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,60 +43,65 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.gypsophila.dailytest.ViewPagerAty"/>
-        <activity android:name="com.example.gypsophila.viewflipper.ViewFlipperAty"/>
-        <activity android:name="com.example.gypsophila.scrollview.ScrollViewAty"/>
-        <activity android:name="com.example.gypsophila.gallery.GalleryAty"/>
-        <activity android:name="com.example.gypsophila.seekbar.SeekBarAty"/>
-        <activity android:name="com.example.gypsophila.toast.ToastAty"/>
-        <activity android:name="com.example.gypsophila.dialog.DialogAty"/>
-        <activity android:name="com.example.gypsophila.notification.NotificationAty"/>
-        <activity android:name="com.example.gypsophila.contextmenu.ContextMenuAty"/>
-        <activity android:name="com.example.gypsophila.sharedpreferences.SharedPreferencesAty"/>
-        <activity android:name="com.example.gypsophila.sqlitedatabase.SQLiteDataBaseAty"/>
-        <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty" />
-        <activity android:name="com.example.gypsophila.contentprovider.ContentResolverAty2" />
-        <activity android:name="com.example.gypsophila.broadcast.BroadCastAty" />
-        <activity android:name="com.example.gypsophila.service.ServiceAty" />
-        <activity android:name="com.example.gypsophila.systemservice.SystemServiceAty" />
-        <activity android:name="com.example.gypsophila.file.FileAty" />
-        <activity android:name="com.example.gypsophila.baseadapter.BaseAdapterAty" />
-        <activity android:name="com.example.gypsophila.asynctask.MyAsyncTaskAty" />
-        <activity android:name="com.example.gypsophila.asynctask.ImageTestAty" />
-        <activity android:name="com.example.gypsophila.asynctask.ProgressBarTestAty" />
-        <activity android:name="com.example.gypsophila.asynctaskload.AsyncTaskLoadAty" />
-        <activity android:name="com.example.gypsophila.http.HttpAty" />
-        <activity android:name="com.example.gypsophila.http.HttpImageAty" />
-        <activity android:name="com.example.gypsophila.http.HttpWebViewAty" />
-        <activity android:name="com.example.gypsophila.httpconn.HttpConnAty" />
-        <activity android:name="com.example.gypsophila.httpconn.HttpConnAty1" />
-        <activity android:name="com.example.gypsophila.httpconn.JsonAty" />
-        <activity android:name="com.example.gypsophila.httpconn.XmlAty" />
-        <activity android:name="com.example.gypsophila.httpconn.DownloadAty" />
-        <activity android:name="com.example.gypsophila.httpconn.HttpUploadAty" />
-        <activity android:name="com.example.gypsophila.handler.HandlerAty" />
-        <activity android:name="com.example.gypsophila.baidumap.BaiduMapAty" />
-        <activity android:name=".BtnListViewAty" />
-        <activity android:name="com.example.gypsophila.sensor.SensorAty" />
-        <activity android:name="com.example.gypsophila.sensor.SensorCPAty" />
-        <activity android:name="com.example.gypsophila.animation.AnimationAty" />
-        <activity android:name="com.example.gypsophila.animation.AniListViewAty" />
-        <activity android:name="com.example.gypsophila.title.TitleAty1" />
-        <activity android:name="com.example.gypsophila.msg.MsgAty" />
-        <activity android:name="com.example.gypsophila.fragmentpractice.NewsAty" />
-        <activity android:name="com.example.gypsophila.fragmentpractice.NewsContentAty" />
+        <activity android:name="com.example.weather.dailytest.ViewPagerAty"/>
+        <activity android:name="com.example.weather.viewflipper.ViewFlipperAty"/>
+        <activity android:name="com.example.weather.scrollview.ScrollViewAty"/>
+        <activity android:name="com.example.weather.gallery.GalleryAty"/>
+        <activity android:name="com.example.weather.seekbar.SeekBarAty"/>
+        <activity android:name="com.example.weather.toast.ToastAty"/>
+        <activity android:name="com.example.weather.dialog.DialogAty"/>
+        <activity android:name="com.example.weather.notification.NotificationAty"/>
+        <activity android:name="com.example.weather.contextmenu.ContextMenuAty"/>
+        <activity android:name="com.example.weather.sharedpreferences.SharedPreferencesAty"/>
+        <activity android:name="com.example.weather.sqlitedatabase.SQLiteDataBaseAty"/>
+        <activity android:name="com.example.weather.contentprovider.ContentResolverAty" />
+        <activity android:name="com.example.weather.contentprovider.ContentResolverAty2" />
+        <activity android:name="com.example.weather.broadcast.BroadCastAty" />
+        <activity android:name="com.example.weather.service.ServiceAty" />
+        <activity android:name="com.example.weather.systemservice.SystemServiceAty" />
+        <activity android:name="com.example.weather.file.FileAty" />
+        <activity android:name="com.example.weather.baseadapter.BaseAdapterAty" />
+        <activity android:name="com.example.weather.asynctask.MyAsyncTaskAty" />
+        <activity android:name="com.example.weather.asynctask.ImageTestAty" />
+        <activity android:name="com.example.weather.asynctask.ProgressBarTestAty" />
+        <activity android:name="com.example.weather.asynctaskload.AsyncTaskLoadAty" />
+        <activity android:name="com.example.weather.http.HttpAty" />
+        <activity android:name="com.example.weather.http.HttpImageAty" />
+        <activity android:name="com.example.weather.http.HttpWebViewAty" />
+        <activity android:name="com.example.weather.httpconn.HttpConnAty" />
+        <activity android:name="com.example.weather.httpconn.HttpConnAty1" />
+        <activity android:name="com.example.weather.httpconn.JsonAty" />
+        <activity android:name="com.example.weather.httpconn.XmlAty" />
+        <activity android:name="com.example.weather.httpconn.DownloadAty" />
+        <activity android:name="com.example.weather.httpconn.HttpUploadAty" />
+        <activity android:name="com.example.weather.handler.HandlerAty" />
+        <activity android:name="com.example.weather.baidumap.BaiduMapAty" />
+        <activity android:name="com.example.weather.dailytest.BtnListViewAty" />
+        <activity android:name="com.example.weather.sensor.SensorAty" />
+        <activity android:name="com.example.weather.sensor.SensorCPAty" />
+        <activity android:name="com.example.weather.animation.AnimationAty" />
+        <activity android:name="com.example.weather.animation.AniListViewAty" />
+        <activity android:name="com.example.weather.title.TitleAty1" />
+        <activity android:name="com.example.weather.msg.MsgAty" />
+        <activity android:name="com.example.weather.fragmentpractice.NewsAty" />
+        <activity android:name="com.example.weather.fragmentpractice.NewsContentAty" />
+        <activity android:name="com.example.weather.httpconn.WeatherAty">
 
+        </activity>
+
+        <activity android:name="com.example.weather.notification.NotificationAty2" />
+        <activity android:name="com.example.weather.sms.SMS_ReceivedAty" />
 
 
         <service
-            android:name="com.example.gypsophila.service.MyStartService" />
-        <service android:name="com.example.gypsophila.service.MyBindService" />
-        <receiver android:name="com.example.gypsophila.broadcast.BCR1">
+            android:name="com.example.weather.service.MyStartService" />
+        <service android:name="com.example.weather.service.MyBindService" />
+        <receiver android:name="com.example.weather.broadcast.BCR1">
             <intent-filter>
                 <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.example.gypsophila.broadcast.BCR2">
+        <receiver android:name="com.example.weather.broadcast.BCR2">
             <intent-filter>
                 <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
             </intent-filter>
