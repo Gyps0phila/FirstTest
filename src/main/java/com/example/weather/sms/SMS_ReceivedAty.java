@@ -1,5 +1,6 @@
 package com.example.weather.sms;
 
+import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.weather.dailytest.BaseAty;
 import com.example.weather.dailytest.R;
@@ -24,10 +26,13 @@ public class SMS_ReceivedAty extends BaseAty {
 
     private TextView sender,content;
     private MessageReceiver receiver;
-    private IntentFilter intentFilter;
+    private IntentFilter receiveFilter;
 
     private EditText to,send_contnt;
     private Button btn_send;
+
+    private IntentFilter sendFilter;
+    private SendStatusReceiver sendReceiver;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,14 +46,19 @@ public class SMS_ReceivedAty extends BaseAty {
             @Override
             public void onClick(View v) {
                 SmsManager manager = SmsManager.getDefault();
-                manager.sendTextMessage(to.getText().toString(), null, send_contnt.getText().toString(), null, null);
+                Intent sendIntent = new Intent("SENT_SMS_ACTION");
+                PendingIntent pi = PendingIntent.getBroadcast(SMS_ReceivedAty.this, 0, sendIntent, 0);
+                manager.sendTextMessage(to.getText().toString(), null, send_contnt.getText().toString(), pi, null);
             }
         });
-
-        intentFilter = new IntentFilter();
-        intentFilter.addAction("android.provider.Telephony.SMS_RECEIVED");
+        sendFilter = new IntentFilter();
+        sendFilter.addAction("SENT_SMS_ACTION");
+        sendReceiver = new SendStatusReceiver();
+        registerReceiver(sendReceiver, sendFilter);
+        receiveFilter = new IntentFilter();
+        receiveFilter.addAction("android.provider.Telephony.SMS_RECEIVED");
         receiver = new MessageReceiver();
-        registerReceiver(receiver, intentFilter);
+        registerReceiver(receiver, receiveFilter);
     }
 
     @Override
@@ -56,6 +66,20 @@ public class SMS_ReceivedAty extends BaseAty {
         super.onDestroy();
         unregisterReceiver(receiver);
 
+    }
+
+    class SendStatusReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (getResultCode() == RESULT_OK) {
+                //短信发送成功 小米短信发送成功的提示也应是类似
+                Toast.makeText(context, "短信发送成功", Toast.LENGTH_SHORT).show();
+            } else {
+                // 短信发送失败
+                Toast.makeText(context, "Send failed", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
     class MessageReceiver extends BroadcastReceiver {
