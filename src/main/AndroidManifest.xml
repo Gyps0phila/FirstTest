@@ -93,6 +93,13 @@
         <activity android:name="com.example.weather.notification.NotificationAty2" />
         <activity android:name="com.example.weather.sms.SMS_ReceivedAty" />
         <activity android:name="com.example.weather.takephoto.TakePhotoAty" />
+        <activity android:name="com.example.weather.player.MediaPlayerAty" />
+        <activity android:name="com.example.weather.player.VideoPlayerAty" />
+
+        <activity android:name="com.example.weather.service.MyIntentServiceAty" />
+
+        <service android:name="com.example.weather.service.MyIntentService" />
+
 
         <service
             android:name="com.example.weather.service.MyStartService" />

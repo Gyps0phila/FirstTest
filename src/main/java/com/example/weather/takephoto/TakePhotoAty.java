@@ -46,6 +46,8 @@ public class TakePhotoAty extends BaseAty {
                 /**
                  * 以这种方式试验成功，但图片大的就失败显示不出来
                  * 而《第一行代码》中示例并不行
+                 * 更好的做法是根据项目的需求先对照片进行适当的压
+                 * 缩，然后再加载到内存中
                  */
                 Intent i = new Intent(
                         Intent.ACTION_PICK,
@@ -96,7 +98,10 @@ public class TakePhotoAty extends BaseAty {
                 Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
                 //在拍照的活动中接受到这个参数，存储拍照的图片
                 intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
+                //启动拍照程序后，再在返回结果启动裁剪图片的程序
                 startActivityForResult(intent, TAKE_PHOTO);
+
+
             }
         });
     }
