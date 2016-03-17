@@ -35,7 +35,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.weather.dailytest.MainActivity"
+            android:name="com.example.dailytest.dailytest.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,78 +43,82 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.weather.dailytest.ViewPagerAty"/>
-        <activity android:name="com.example.weather.viewflipper.ViewFlipperAty"/>
-        <activity android:name="com.example.weather.scrollview.ScrollViewAty"/>
-        <activity android:name="com.example.weather.gallery.GalleryAty"/>
-        <activity android:name="com.example.weather.seekbar.SeekBarAty"/>
-        <activity android:name="com.example.weather.toast.ToastAty"/>
-        <activity android:name="com.example.weather.dialog.DialogAty"/>
-        <activity android:name="com.example.weather.notification.NotificationAty"/>
-        <activity android:name="com.example.weather.contextmenu.ContextMenuAty"/>
-        <activity android:name="com.example.weather.sharedpreferences.SharedPreferencesAty"/>
-        <activity android:name="com.example.weather.sqlitedatabase.SQLiteDataBaseAty"/>
-        <activity android:name="com.example.weather.contentprovider.ContentResolverAty" />
-        <activity android:name="com.example.weather.contentprovider.ContentResolverAty2" />
-        <activity android:name="com.example.weather.broadcast.BroadCastAty" />
-        <activity android:name="com.example.weather.service.ServiceAty" />
-        <activity android:name="com.example.weather.systemservice.SystemServiceAty" />
-        <activity android:name="com.example.weather.file.FileAty" />
-        <activity android:name="com.example.weather.baseadapter.BaseAdapterAty" />
-        <activity android:name="com.example.weather.asynctask.MyAsyncTaskAty" />
-        <activity android:name="com.example.weather.asynctask.ImageTestAty" />
-        <activity android:name="com.example.weather.asynctask.ProgressBarTestAty" />
-        <activity android:name="com.example.weather.asynctaskload.AsyncTaskLoadAty" />
-        <activity android:name="com.example.weather.http.HttpAty" />
-        <activity android:name="com.example.weather.http.HttpImageAty" />
-        <activity android:name="com.example.weather.http.HttpWebViewAty" />
-        <activity android:name="com.example.weather.httpconn.HttpConnAty" />
-        <activity android:name="com.example.weather.httpconn.HttpConnAty1" />
-        <activity android:name="com.example.weather.httpconn.JsonAty" />
-        <activity android:name="com.example.weather.httpconn.XmlAty" />
-        <activity android:name="com.example.weather.httpconn.DownloadAty" />
-        <activity android:name="com.example.weather.httpconn.HttpUploadAty" />
-        <activity android:name="com.example.weather.handler.HandlerAty" />
-        <activity android:name="com.example.weather.baidumap.BaiduMapAty" />
-        <activity android:name="com.example.weather.dailytest.BtnListViewAty" />
-        <activity android:name="com.example.weather.sensor.SensorAty" />
-        <activity android:name="com.example.weather.sensor.SensorCPAty" />
-        <activity android:name="com.example.weather.animation.AnimationAty" />
-        <activity android:name="com.example.weather.animation.AniListViewAty" />
-        <activity android:name="com.example.weather.title.TitleAty1" />
-        <activity android:name="com.example.weather.msg.MsgAty" />
-        <activity android:name="com.example.weather.fragmentpractice.NewsAty" />
-        <activity android:name="com.example.weather.fragmentpractice.NewsContentAty" />
-        <activity android:name="com.example.weather.httpconn.WeatherAty">
+        <activity android:name="com.example.dailytest.dailytest.ViewPagerAty"/>
+        <activity android:name="com.example.dailytest.viewflipper.ViewFlipperAty"/>
+        <activity android:name="com.example.dailytest.scrollview.ScrollViewAty"/>
+        <activity android:name="com.example.dailytest.gallery.GalleryAty"/>
+        <activity android:name="com.example.dailytest.seekbar.SeekBarAty"/>
+        <activity android:name="com.example.dailytest.toast.ToastAty"/>
+        <activity android:name="com.example.dailytest.dialog.DialogAty"/>
+        <activity android:name="com.example.dailytest.notification.NotificationAty"/>
+        <activity android:name="com.example.dailytest.contextmenu.ContextMenuAty"/>
+        <activity android:name="com.example.dailytest.sharedpreferences.SharedPreferencesAty"/>
+        <activity android:name="com.example.dailytest.sqlitedatabase.SQLiteDataBaseAty"/>
+        <activity android:name="com.example.dailytest.contentprovider.ContentResolverAty" />
+        <activity android:name="com.example.dailytest.contentprovider.ContentResolverAty2" />
+        <activity android:name="com.example.dailytest.broadcast.BroadCastAty" />
+        <activity android:name="com.example.dailytest.service.ServiceAty" />
+        <activity android:name="com.example.dailytest.systemservice.SystemServiceAty" />
+        <activity android:name="com.example.dailytest.file.FileAty" />
+        <activity android:name="com.example.dailytest.baseadapter.BaseAdapterAty" />
+        <activity android:name="com.example.dailytest.asynctask.MyAsyncTaskAty" />
+        <activity android:name="com.example.dailytest.asynctask.ImageTestAty" />
+        <activity android:name="com.example.dailytest.asynctask.ProgressBarTestAty" />
+        <activity android:name="com.example.dailytest.asynctaskload.AsyncTaskLoadAty" />
+        <activity android:name="com.example.dailytest.http.HttpAty" />
+        <activity android:name="com.example.dailytest.http.HttpImageAty" />
+        <activity android:name="com.example.dailytest.http.HttpWebViewAty" />
+        <activity android:name="com.example.dailytest.httpconn.HttpConnAty" />
+        <activity android:name="com.example.dailytest.httpconn.HttpConnAty1" />
+        <activity android:name="com.example.dailytest.httpconn.JsonAty" />
+        <activity android:name="com.example.dailytest.httpconn.XmlAty" />
+        <activity android:name="com.example.dailytest.httpconn.DownloadAty" />
+        <activity android:name="com.example.dailytest.httpconn.HttpUploadAty" />
+        <activity android:name="com.example.dailytest.handler.HandlerAty" />
+        <activity android:name="com.example.dailytest.baidumap.BaiduMapAty" />
+        <activity android:name="com.example.dailytest.dailytest.BtnListViewAty" />
+        <activity android:name="com.example.dailytest.sensor.SensorAty" />
+        <activity android:name="com.example.dailytest.sensor.SensorCPAty" />
+        <activity android:name="com.example.dailytest.animation.AnimationAty" />
+        <activity android:name="com.example.dailytest.animation.AniListViewAty" />
+        <activity android:name="com.example.dailytest.title.TitleAty1" />
+        <activity android:name="com.example.dailytest.msg.MsgAty" />
+        <activity android:name="com.example.dailytest.fragmentpractice.NewsAty" />
+        <activity android:name="com.example.dailytest.fragmentpractice.NewsContentAty" />
+        <activity android:name="com.example.dailytest.httpconn.WeatherAty">
 
 
         </activity>
 
-        <activity android:name="com.example.weather.notification.NotificationAty2" />
-        <activity android:name="com.example.weather.sms.SMS_ReceivedAty" />
-        <activity android:name="com.example.weather.takephoto.TakePhotoAty" />
-        <activity android:name="com.example.weather.player.MediaPlayerAty" />
-        <activity android:name="com.example.weather.player.VideoPlayerAty" />
+        <activity android:name="com.example.dailytest.notification.NotificationAty2" />
+        <activity android:name="com.example.dailytest.sms.SMS_ReceivedAty" />
+        <activity android:name="com.example.dailytest.takephoto.TakePhotoAty" />
+        <activity android:name="com.example.dailytest.player.MediaPlayerAty" />
+        <activity android:name="com.example.dailytest.player.VideoPlayerAty" />
 
-        <activity android:name="com.example.weather.service.MyIntentServiceAty" />
+        <activity android:name="com.example.dailytest.service.MyIntentServiceAty" />
 
-        <activity android:name="com.example.weather.service.LongRunningServiceAty" />
+        <activity android:name="com.example.dailytest.service.LongRunningServiceAty" />
 
-        <service android:name="com.example.weather.service.LongRunningService" />
-        <receiver android:name="com.example.weather.service.AlarmReceiver" />
 
-        <service android:name="com.example.weather.service.MyIntentService" />
+        <activity android:name="com.example.dailytest.intent.ObjectTransportAty1" />
+        <activity android:name="com.example.dailytest.intent.ObjectTransportAty2" />
+
+        <service android:name="com.example.dailytest.service.LongRunningService" />
+        <receiver android:name="com.example.dailytest.service.AlarmReceiver" />
+
+        <service android:name="com.example.dailytest.service.MyIntentService" />
 
 
         <service
-            android:name="com.example.weather.service.MyStartService" />
-        <service android:name="com.example.weather.service.MyBindService" />
-        <receiver android:name="com.example.weather.broadcast.BCR1">
+            android:name="com.example.dailytest.service.MyStartService" />
+        <service android:name="com.example.dailytest.service.MyBindService" />
+        <receiver android:name="com.example.dailytest.broadcast.BCR1">
             <intent-filter>
                 <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
             </intent-filter>
         </receiver>
-        <receiver android:name="com.example.weather.broadcast.BCR2">
+        <receiver android:name="com.example.dailytest.broadcast.BCR2">
             <intent-filter>
                 <action android:name="com.example.gypsophila.broadcast.BroadCastAty"/>
             </intent-filter>

@@ -2,7 +2,8 @@ package com.example.weather.dailytest;
 
 import android.test.AndroidTestCase;
 
-import com.example.weather.animation.AniListViewAty;
+import com.example.dailytest.animation.AniListViewAty;
+import com.example.dailytest.dailytest.ActivityCollector;
 
 /**
  * Created by Gypsophila on 2016/3/10.
